@@ -30,6 +30,13 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: "vue-loader",
+        options: {
+          compilerOptions: {
+            compatConfig: {
+              MODE: 2,
+            },
+          },
+        },
       },
       {
         test: /\.(eot|ttf|woff|woff2)(\?\S*)?$/,
@@ -67,7 +74,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      vue$: "vue/dist/vue.runtime.esm.js",
+      vue: "@vue/compat",
     },
     extensions: ["*", ".js", ".ts", ".vue", ".json"],
   },
