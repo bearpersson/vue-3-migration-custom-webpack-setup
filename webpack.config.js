@@ -3,6 +3,7 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   entry: {
@@ -70,6 +71,10 @@ module.exports = {
     new htmlWebpackPlugin({
       template: path.resolve(__dirname, "public", "index.html"),
       favicon: "./public/favicon.ico",
+    }),
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: true,
+      __VUE_PROD_DEVTOOLS__: false,
     }),
   ],
   resolve: {
