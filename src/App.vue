@@ -2,17 +2,20 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <HelloClassComponent msg="This is a class component" />
   </div>
 </template>
 
 <script lang="ts">
 import HelloWorld from "@components/HelloWorld.vue";
+import HelloClassComponent from "@components/HelloClassComponent.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "App",
   components: {
     HelloWorld,
+    HelloClassComponent,
   },
 });
 </script>
