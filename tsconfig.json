@@ -17,8 +17,8 @@
       "@types/jest"
     ],
     "paths": {
-      "@/*": [
-        "src/*"
+      "@components/*": [
+        "src/components/*"
       ]
     },
     "lib": [

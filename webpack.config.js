@@ -72,6 +72,9 @@ module.exports = {
   ],
   resolve: {
     extensions: ["*", ".js", ".ts", ".vue", ".json"],
+    alias: {
+      "@components": path.resolve(__dirname, "./src/components"),
+    },
   },
   devServer: {
     historyApiFallback: true,
