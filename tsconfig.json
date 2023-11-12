@@ -20,7 +20,10 @@
     "paths": {
       "@components/*": [
         "src/components/*"
-      ]
+      ],
+      "@components": [
+        "src/components/index.ts",
+      ],
     },
     "lib": [
       "esnext",
